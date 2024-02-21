@@ -1,19 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>Inês & João</title>
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-        <!-- Font Awesome icons (free version)-->
-        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-        <!-- Google fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" />
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Inês & João</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+
+    <script>
+        // Set the target date for the countdown
+        var targetDate = new Date("September 21, 2024 14:30:00").getTime();
+
+        // Update the countdown every second
+        var countdownInterval = setInterval(function() {
+            // Get the current date and time
+            var currentDate = new Date().getTime();
+
+            // Calculate the remaining time
+            var remainingTime = targetDate - currentDate;
+
+            // Calculate days, hours, minutes, and seconds
+            var days = Math.floor(remainingTime / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((remainingTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
+
+            // Display the countdown
+            document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
+            + minutes + "m " + seconds + "s ";
+
+            // If the countdown is over, display a message
+            if (remainingTime < 0) {
+                clearInterval(countdownInterval);
+                document.getElementById("countdown").innerHTML = "Chegou o dia!";
+            }
+        }, 1000); // Update every second
+    </script>
     </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -37,9 +67,12 @@
             <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
                 <div class="d-flex justify-content-center">
                     <div class="text-center">
+                        <!-- Countdown will be displayed here -->
                         <h1 class="mx-auto my-0 text-uppercase">I & J</h1>
                         <h2 class="text-white-50 mx-auto mt-2 mb-5">21 Setembro 2024 | 14:30</h2>
-                        <a class="btn btn-primary" href="#projects">Estou interessado</a>
+                        <a class="btn btn-primary" href="#projects">Interessante, quero saber mais!</a>
+                        <h1 class="text-white-50 mx-auto mt-2 mb-5"></h1>
+                        <h3 id="countdown" class="text-white-30 mx-auto mt-2 mb-5">Countdown</h3>
                     </div>
                 </div>
             </div>
@@ -52,8 +85,8 @@
                     <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="assets/img/about.jpeg" alt="..." /></div>
                     <div class="col-xl-4 col-lg-5">
                         <div class="featured-text text-center text-lg-left">
-                            <h4>Shoreline</h4>
-                            <p class="text-black-50 mb-0">Grayscale is open source and MIT licensed. This means you can use it for any project - even commercial projects! Download it, customize it, and publish your website!</p>
+                            <h4>Parabéns</h4>
+                            <p class="text-black-50 mb-0">Foste selecionado/a para entrar na lista de convidados VIP do evento mais exclusivo do ano! Vai ser um dia repleto de música, comida e bebida, conversa e partilha, com alguns momentos solenes à mistura e cheio de pessoas conhecidas (não famosas, mas algumas devem ser tuas conhecidas). Para confirmares a tua presença, preenche este <a href="https://forms.gle/WQNPFGPTU8khvfC16" target="_blank">formulário</a> ou manda-nos uma mensagem (contactos no fim da página). Não dizemos que esperamos que venhas, porque não vir não é uma opção! Bons treinos de dança, e boas provas de roupa!</p>
                         </div>
                     </div>
                 </div>
@@ -98,6 +131,7 @@
                                 <h4 class="text-uppercase m-0">Confirmações</h4>
                                 <hr class="my-4 mx-auto" />
                                 <div class="small text-black-50">Ainda sem data limite.</div>
+                                <div class="small text-black-50"><a href="https://forms.gle/WQNPFGPTU8khvfC16" target="_blank">Formulário</a> ou mensagem.</div>
                             </div>
                         </div>
                     </div>
@@ -105,10 +139,10 @@
                         <div class="card py-4 h-100">
                             <div class="card-body text-center">
                                 <i class="fas fa-envelope text-primary mb-2"></i>
-                                <h4 class="text-uppercase m-0">Email</h4>
+                                <h4 class="text-uppercase m-0">Contactos</h4>
                                 <hr class="my-4 mx-auto" />
-                                <div class="small text-black-50">Inês: <a href="#!">inesfvilarinho@gmail.com</a></div>
-                                <div class="small text-black-50">João: <a href="#!">joaoappereira@gmail.com</a></div>
+                                <div class="small text-black-50">Inês: 912 033 931</div>
+                                <div class="small text-black-50">João: 916 184 765</div>
                             </div>
                         </div>
                     </div>
@@ -116,31 +150,12 @@
                         <div class="card py-4 h-100">
                             <div class="card-body text-center">
                                 <i class="fas fa-mobile-alt text-primary mb-2"></i>
-                                <h4 class="text-uppercase m-0">Telemóvel</h4>
+                                <h4 class="text-uppercase m-0">IBAN</h4>
                                 <hr class="my-4 mx-auto" />
-                                <div class="small text-black-50">Inês: 912 033 931</div>
-                                <div class="small text-black-50">João: 916 184 765</div>
+                                <div class="small text-black-50">PT50003300004565724583305</div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="social d-flex justify-content-center">
-                    <!--<a class="mx-2" href="#!"><i class="fab fa-twitter"></i></a>-->
-                    <!--<a class="mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>-->
-                    <!--<a class="mx-2" href="#!"><i class="fab fa-github"></i></a>-->
-                </div>
-            </div>
-        </section>
-        <!-- Footer-->
-        <footer class="footer bg-black small text-center text-white-50"><div class="container px-4 px-lg-5">Copyright &copy; Your Website 2023</div></footer>
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <!-- * *                               SB Forms JS                               * *-->
-        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
     </body>
 </html>
